@@ -154,8 +154,8 @@ def user_stats(df):
 
     # TO DO: Display counts of gender
     if ('Gender' in df):
-        gender_counts = df['Gender'].value_counts()
-        print('Here are the user counts by gender: {}'.format(gender_counts))
+        user_gender_counts = df['Gender'].value_counts()
+        print('Here are the user counts by gender: {}'.format(user_gender_counts))
 
     # TO DO: Display earliest, most recent, and most common year of birth
     # I was having  issues with my code retunring .0 at the end of the year so the mentor Raheel told me to use {:.0f} to get the year to return normally.
