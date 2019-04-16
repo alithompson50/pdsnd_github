@@ -94,7 +94,7 @@ def time_stats(df):
     most_common_hour = df['hour'].value_counts().idxmax()
     print('The most popular hour for bike travel is: {}'.format(most_common_hour))
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    print('\nThis took %s seconds.' % (time.time() - start_time))
     print('-'*40)
 
 
@@ -117,7 +117,7 @@ def station_stats(df):
     most_frequent_comb = df['frequent_comb'].mode().loc[0]
     print('The most frequent trip taken is from: {}'.format(most_frequent_comb))
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    print('\nThis took %s seconds.' % (time.time() - start_time))
     print('-'*40)
 
 
@@ -135,7 +135,7 @@ def trip_duration_stats(df):
     mean_travel_time = df['Trip Duration'].mean()
     print('The average travel time is: {} seconds.'.format(mean_travel_time))
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    print('\nThis took %s seconds.' % (time.time() - start_time))
     print('-'*40)
 
 
@@ -151,8 +151,8 @@ def user_stats(df):
 
     # TO DO: Display counts of gender
     if ('Gender' in df):
-        gender_counts = df['Gender'].value_counts()
-        print('Here are the user counts by gender: {}'.format(gender_counts))
+        user_gender_counts = df['Gender'].value_counts()
+        print('Here are the user counts by gender: {}'.format(user_gender_counts))
 
     # TO DO: Display earliest, most recent, and most common year of birth
     if ('Birth Year' in df):
@@ -162,7 +162,7 @@ def user_stats(df):
         print('The earliest birth year is {:.0f}, the most recent birth year is {:.0f}, and the most common birth year is {:.0f}.'.format(earliest_birth_year, most_recent_birth_year, most_common_birth_year))
 
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    print('\nThis took %s seconds.' % (time.time() - start_time))
     print('-'*40)
 
 def raw(df):
@@ -198,5 +198,5 @@ def main():
             break
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
